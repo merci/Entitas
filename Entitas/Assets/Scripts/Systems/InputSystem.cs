@@ -4,12 +4,10 @@ using Entitas;
 public class InputSystem :IExecuteSystem
 {
     private readonly Contexts _contexts;
-    //private InputEntity inputEntity;
 
     public InputSystem(Contexts contexts)
     {
         _contexts = contexts;
-       
     }
 
 
@@ -19,5 +17,6 @@ public class InputSystem :IExecuteSystem
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
         inputEntity.AddInputCom(new Vector2(inputX, inputY));
+
     }
 }
